@@ -1,31 +1,21 @@
-<<<<<<< HEAD
 import sqlite3
 
+db_name = 'blog.db'
 connection = None
 cursor = None
 
 def open():
     global connection, cursor
-    connection = sqlite3.connect('blog.db')
+    connection = sqlite3.connect(db_name)
     cursor = connection.cursor()
 
 def close():
     cursor.close()
     connection.close()
 
-=======
-import sqlite3
-
-connection = None
-cursor = None
-
-def open():
-    global connection, cursor
-    connection = sqlite3.connect('blog.db')
-    cursor = connection.cursor()
-
-def close():
-    cursor.close()
-    connection.close()
-
->>>>>>> 024623dd947361b8c6e2a93aef893f9e0babecab
+def getUser():
+    open()
+    cursor.execute('''SELECT * From user''')
+    user = cursor.fetchone()
+    close()
+    return user
