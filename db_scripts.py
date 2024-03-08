@@ -56,3 +56,8 @@ def addPost(category_id, post_text):
     connection.commit()
     close()
 
+def deletePost(post_id):
+    open()
+    cursor.execute('''DELETE FROM post WHERE post_id=(?) ''', [post_id])
+    connection.commit()
+    close()

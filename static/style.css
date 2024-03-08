@@ -1,0 +1,18 @@
+body{
+    background-color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-image{
+    float: left;
+    border: 5px double black;
+    margin-right: 10px;
+}
+
+.category-header{
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.post-input{
+    font-size: large;
+}
