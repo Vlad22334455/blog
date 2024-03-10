@@ -1,5 +1,5 @@
 body{
-    background-color: burlywood;
+    background-color: rgb(198, 168, 80);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,7 +12,52 @@ body{
 .category-header{
     font-size: xx-large;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
 }
 .post-input{
     font-size: large;
+    
+}
+
+
+
+.nav-item:hover{
+    background-color: rgb(208, 207, 207);
+    color: antiquewhite;
+}
+.nav-link:hover{
+    color: rgb(169, 97, 3);
+    background-color: rgb(208, 207, 207);
+
+}
+.add{
+    text-align: center;
+}
+
+
+.go{
+    background-color: rgb(158, 131, 49);
+    border-color: rgb(158, 131, 49);
+}
+.go:hover{
+    background-color:rgb(216, 187, 100) ;
+    border-color: rgb(216, 187, 100);
+    color: rgb(0, 0, 0);
+
+    }
+
+
+.bolder{
+    background-color: rgb(209, 225, 247);
+}
+
+
+
+.info{
+    margin-top: 10px;
+    margin-left: 20px; 
+    margin-right: 20px;
+
+    display: flex;
+    justify-content: space-between;
 }

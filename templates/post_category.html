@@ -1,17 +1,16 @@
 {% extends "index.html" %}
 
 {%block content%}
-
 <h2 class="my-4 ms -3 category-header">{{category_name}}</h2>
 
 <section class="category_content">
     <div>
         {%for post in posts%}
-        <div class="card my-4">
+        <div class="card my-4 bolder">
           <div class="card-body">
             <a href="/post/delete/{{post[0]}}/{{category_name}}" onclick="return confirm('Видалити пост?')">          <button  type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="float: right"></button>
             </a>
-              <image class="post-image" src="/static/{{post[0]}}.jpg" alt="{{post[0]}}" width="200px" height="100px">
+              <image class="post-image" src="/static/{{post[0]}}.jpg" alt="{{post[0]}}" width="280px" height="180px">
               <h5 class="card-title">{{post[2]}}</h5>
           </div>
           <footer class="card-footer">{{post[3]}}</footer>
@@ -19,13 +18,16 @@
         {%endfor%}
         </div>
 
-        <div class="card mt-5"> 
-            <div class="card-body bg-dark-subtle">
-              <h3 class="card-title">Додавання посту</h3>
+        <div class="card mt-5 bolder"> 
+            <div class="card-body">
+
+              <div class="add">
+                <h3 class="card-title">Додавання посту</h3>
+              </div>
               <hr>
               <form method="POST">
                   <textarea name="post" class="form-control post-input"></textarea><br>
-                  <input type="submit" class="btn btn-primary btn-lg" value="Відправити">
+                  <div class="add"><input type="submit" class="btn btn-primary btn-lg go" value="Відправити"></div>
                   <input type="hidden" name="category_id" value="{{category_id}}">
               </form>
             </div>
