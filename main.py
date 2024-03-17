@@ -13,6 +13,7 @@ def index ():
 
 
 
+
 @app.route('/post/category/<category_name>', methods=["GET", "POST"])
 def post_category(category_name):
     category_id = db.getIdByCategory(category_name)
@@ -33,6 +34,8 @@ def post_category(category_name):
 
 
 
+
+
 @app.route('/post/view')
 def post_view():
     return 'here will be post'
@@ -49,6 +52,6 @@ def deletePost(post_id, category_name):
     return redirect(f"/post/category/{category_name}")
 
 
-app.run(debug=True)
+app.run(debug=True, host="0.0.0.0",port=5000)
 
 
