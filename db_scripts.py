@@ -38,7 +38,7 @@ def getPostsByCategory(category_name):
     cursor.execute('''
         SELECT * FROM post, category WHERE category_name = (?)
         AND post.category_id = category.category_id
-        ORDER BY post_datetime  DESC
+        ORDER BY post_datetime  DESC        
 
      ''', [category_name])
     posts = cursor.fetchall()
